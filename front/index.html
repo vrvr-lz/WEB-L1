@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка попадания точки</title>
+
+    <!-- Подключение шрифта Roboto Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Подключение вашего стиля -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Скрипты -->
+    <script src="js/scripts.js" defer></script>
+    <script src="js/graph.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>ПРОВЕРКА ПОПАДАНИЯ ТОЧКИ В ОБЛАСТЬ</h1>
+    <p>ФИО: Лизунова Варвара Дмитриевна</p>
+    <p>Группа: P3225</p>
+    <p>Вариант: 409008</p>
+</header>
+
+<div class="container">
+    <form id="point-form">
+        <table>
+            <tr>
+                <td><p><span class="bold-text">Изменение X:</span></p></td>
+                <td><input type="text" id="x-value" name="x-value" placeholder="Введите X (-3 до 3)"></td>
+            </tr>
+            <tr>
+                <td><p><span class="bold-text">Изменение Y:</span></p></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="y-2" name="y-value" value="-2">
+                        <label for="y-2">-2</label>
+
+                        <input type="radio" id="y-1.5" name="y-value" value="-1.5">
+                        <label for="y-1.5">-1.5</label>
+
+                        <input type="radio" id="y-1" name="y-value" value="-1">
+                        <label for="y-1">-1</label>
+
+                        <input type="radio" id="y-0.5" name="y-value" value="-0.5">
+                        <label for="y-0.5">-0.5</label>
+
+                        <input type="radio" id="y-0" name="y-value" value="0" checked>
+                        <label for="y-0">0</label>
+
+                        <input type="radio" id="y-0.5pos" name="y-value" value="0.5">
+                        <label for="y-0.5pos">0.5</label>
+
+                        <input type="radio" id="y-1pos" name="y-value" value="1">
+                        <label for="y-1pos">1</label>
+
+                        <input type="radio" id="y-1.5pos" name="y-value" value="1.5">
+                        <label for="y-1.5pos">1.5</label>
+
+                        <input type="radio" id="y-2pos" name="y-value" value="2">
+                        <label for="y-2pos">2</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><p><span class="bold-text">Изменение R:</span></p></td>
+                <td><input type="text" id="r-value" name="r-value" placeholder="Введите R (2 до 5)"></td>
+            </tr>
+        </table>
+    </form>
+
+    <canvas id="graph-canvas" width="400" height="400"></canvas> <!-- Canvas с графиком -->
+</div>
+
+<!-- Submit button centered -->
+<div class="centered-button">
+    <button type="submit" id="submit-btn">ОТПРАВИТЬ</button>
+</div>
+<div id="results">
+    <h2 class="centered-heading">РЕЗУЛЬТАТЫ ПРЕДЫДУЩИХ ЗАПРОСОВ</h2>
+    <table id="results-table" border="1">
+        <thead>
+        <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Попадание</th>
+            <th>Время</th>
+            <th>Время выполнения (ms)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Здесь будут добавляться результаты -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

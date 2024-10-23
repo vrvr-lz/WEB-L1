@@ -1,0 +1,184 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 100px;
+    padding: 20px;
+    background-color: #f2f4f3;
+}
+
+header h1 {
+    font-size: 3.5em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Пунктирная линия */
+header:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px dotted #212227;
+    margin-top: 10px;
+}
+
+/* Удален класс handwritten */
+.centered-heading {
+    text-align: center;
+    font-size: 2.6em; /* Немного увеличен размер заголовка */
+}
+
+/* Оформление формы */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* Поля для ввода X и R */
+input[type="text"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.5%;     /* Отступы заданы в процентах */
+    border: 3px solid #212227;
+    border-radius: 13px;
+    font-size: 28px;
+    box-sizing: border-box;
+}
+
+/* Увеличиваем размер шрифта и делаем жирным фразы "Изменение X, Y, R" */
+.bold-text {
+    font-size: 1.9em; /* Чуть увеличен размер */
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Стили для меток, которые заменяют радио-кнопки */
+input[type="radio"] + label {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #212227;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #212227;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #a61c3c;
+    color: white;
+    border-color: #212227;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Кнопка отправки */
+button {
+    width: 90%;
+    max-width: 260px;
+    padding: 0.4%;     /* Padding в процентах для кнопки */
+    background-color: #212227;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1%;  /* Отступ сверху в процентах */
+    transition: background 0.5s ease, background-position 0.5s ease;
+    font-size: 1.5em;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #a61c3c, #7c2e40, #e15b75);
+    background-size: 200%;
+    background-position: right;
+}
+
+.centered-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results-table {
+    width: 100%;
+    max-width: 1200px; /* 700px * 1.5 = 1050px */
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #212227;
+    border-radius: 10px;
+}
+
+#results-table th, #results-table td {
+    border: 1px solid #212227;
+    padding: 19px; /* 10px * 1.5 = 15px */
+    text-align: center;
+    font-size: 1.7em;
+}
+
+#results-table th {
+    background-color: #212227;
+    color: white;
+}
+
+/* Стили для контейнера формы и графика */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Стили для графика */
+canvas {
+    border: 1px solid #212227;
+    background-color: #f2f4f3;
+    width: 700px;
+    height: 700px;
+    border-radius: 10px;
+}
+
+/* Жирный шрифт для координат на осях графика */
+.axis-label {
+    font-weight: bold;
+    font-size: 3em; /* Увеличенный размер для координат */
+    fill: #212227; /* Цвет текста координат */
+}

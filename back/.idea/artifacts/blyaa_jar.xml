@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="blyaa:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/blyaa_jar</output-path>
+    <root id="archive" name="W1.jar">
+      <element id="module-output" name="W1" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBS/fastcgi-lib (2).jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
